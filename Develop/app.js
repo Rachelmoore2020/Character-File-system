@@ -73,8 +73,7 @@ const promptUser = () => {
     // Pushing manager object to teams array
     Team.push(manager)
     console.log(answers)
-
-    makeTeam()
+    moreEmp()
   })
     
 }
@@ -104,12 +103,12 @@ const promptIntern = () => {
 }
   ])
 .then(answers => {
-  console.log(role)
+  console.log(answers.role)
   let intern = new Intern(answers.name, answers.id, answers.email, answers.school)
   // Pushing manager object to teams array
   Team.push(intern)
   console.log(answers)
-
+  moreEmp()
 })
   
 }
@@ -139,12 +138,12 @@ const promptEngineer = () => {
 }
   ])
 .then(answers => {
-  console.log(role)
+  console.log(answers.role)
   let Engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
   // Pushing manager object to teams array
   Team.push(manager)
   console.log(answers)
-
+moreEmp()
 })
   
 }
@@ -155,7 +154,29 @@ const promptEngineer = () => {
 
   promptUser()
 
+// ask user if they want to add another employee
 
+// call make team after all info has been input
+const moreEmp = () => {
+  inquirer.prompt([
+   
+    
+    {
+      type: 'list',
+      name: 'moreEmployees',
+      message: 'Do you want to add another employee',
+      choices: ["yes", "no"]
+    }
+      ])
+    .then(answers => {
+      if(answers.moreEmployees === "yes") {
+      promptUser()
+      }
+      else {
+      makeTeam()
+    }
+    })
+}
   const makeTeam = () => {
     fs.writeFileSync(outputPath, render(Team), "utf-8")
 
