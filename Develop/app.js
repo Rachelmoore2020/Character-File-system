@@ -139,9 +139,9 @@ const promptEngineer = () => {
   ])
 .then(answers => {
   console.log(answers.role)
-  let Engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
+let engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
   // Pushing manager object to teams array
-  Team.push(manager)
+  Team.push(engineer)
   console.log(answers)
 moreEmp()
 })
