@@ -57,4 +57,6 @@ For questions about Character File System, visit my GitHub page:
   Click on the link to find information about the license
   [License](https://opensource.org/licenses/APACHE 2.0,GPL 3.0,BSD 3,NONE)
   
+  ## Demo:
+  
   ![CharacterMgmt](https://user-images.githubusercontent.com/68473729/99884411-235d4480-2bfc-11eb-8bc2-6aa96f6b7e3a.gif)
