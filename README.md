@@ -46,7 +46,7 @@ so that I have quick access to emails and GitHub profiles
     NONE
 
 ## Questions:
-For questions about Node File Generator, visit my GitHub page:
+For questions about Character File System, visit my GitHub page:
     RachelMoore2020
   
   ## You may also contact me via email at:
